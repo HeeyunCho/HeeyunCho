@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEEYUN CHO - Senior Engineering Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #64ffda;
+            --accent: #f53d3d;
+            --text-main: #ccd6f6;
+            --text-dim: #8892b0;
+            --bg-dark: #0a192f;
+            --bg-light: #112240;
+            --white: #ffffff;
+            --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+        /* Navigation */
+        nav {
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { color: var(--secondary); font-weight: 800; font-size: 1.5rem; letter-spacing: 2px; }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        .hero-pre { color: var(--secondary); font-family: 'Space Mono', monospace; font-size: 1.1rem; margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(40px, 8vw, 80px); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 10px; }
+        .hero h2 { font-size: clamp(30px, 5vw, 60px); font-weight: 600; color: var(--text-dim); line-height: 1; margin-bottom: 30px; }
+        .hero p { max-width: 600px; font-size: 1.2rem; color: var(--text-dim); margin-bottom: 50px; }
+
+        .profile-wrapper { position: absolute; right: 40px; top: 150px; z-index: -1; opacity: 0.3; }
+        .profile-img { width: 350px; height: 350px; border-radius: 10px; filter: grayscale(100%) contrast(1.2); border: 2px solid var(--secondary); }
+
+        /* Sections */
+        section { padding: 100px 0; }
+        .section-header { display: flex; align-items: center; margin-bottom: 40px; width: 100%; }
+        .section-header h3 { font-size: 2rem; color: var(--white); white-space: nowrap; margin-right: 20px; }
+        .section-header span { color: var(--secondary); font-family: 'Space Mono', monospace; margin-right: 10px; font-size: 1.2rem; }
+        .section-header::after { content: ""; display: block; height: 1px; width: 300px; background-color: var(--bg-light); }
+
+        /* Featured Projects (MCP) */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .project-card {
+            background-color: var(--bg-light);
+            padding: 35px;
+            border-radius: 4px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-card:hover { transform: translateY(-10px); border-color: var(--secondary); }
+        .project-card i { font-size: 2.5rem; color: var(--secondary); margin-bottom: 25px; }
+        .project-card h4 { font-size: 1.4rem; color: var(--white); margin-bottom: 15px; }
+        .project-card p { font-size: 0.95rem; color: var(--text-dim); margin-bottom: 25px; }
+        .project-tech { display: flex; gap: 15px; font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--secondary); }
+
+        /* Experience (Automotive & Mobile) */
+        .exp-container { max-width: 900px; }
+        .job { margin-bottom: 80px; position: relative; }
+        .job-header { margin-bottom: 25px; }
+        .job-title { font-size: 1.5rem; color: var(--white); display: inline-block; }
+        .job-company { color: var(--secondary); font-size: 1.5rem; display: inline-block; }
+        .job-date { font-family: 'Space Mono', monospace; font-size: 0.9rem; color: var(--text-dim); margin-top: 5px; }
+        
+        .impact-tag { 
+            background: rgba(100, 255, 218, 0.1); 
+            color: var(--secondary); 
+            padding: 4px 12px; 
+            border-radius: 4px; 
+            font-size: 0.75rem; 
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .job-list { list-style: none; }
+        .job-list li { position: relative; padding-left: 30px; margin-bottom: 15px; font-size: 1rem; color: var(--text-dim); }
+        .job-list li::before { content: "▹"; position: absolute; left: 0; color: var(--secondary); font-size: 1.2rem; }
+        .job-list li strong { color: var(--text-main); }
+
+        /* Skills */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .skill-cat h4 { color: var(--white); margin-bottom: 20px; font-size: 1.2rem; border-left: 3px solid var(--secondary); padding-left: 15px; }
+        .skill-items { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-pill { background: rgba(100, 255, 218, 0.05); border: 1px solid rgba(100, 255, 218, 0.2); color: var(--text-main); padding: 8px 16px; border-radius: 4px; font-size: 0.9rem; transition: var(--transition); }
+        .skill-pill:hover { background: rgba(100, 255, 218, 0.1); color: var(--secondary); border-color: var(--secondary); }
+
+        footer { text-align: center; padding: 60px 0; color: var(--text-dim); font-family: 'Space Mono', monospace; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 25px; }
+            .profile-wrapper { display: none; }
+            .hero h1 { font-size: 50px; }
+            .section-header::after { width: 100px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <div class="logo">HC.ENG</div>
+        <div class="contact-items">
+            <a href="mailto:heeyun.cho.de@gmail.com" style="color: var(--secondary); text-decoration: none; font-family: 'Space Mono', monospace;">/contact</a>
+        </div>
+    </nav>
+
+    <div class="profile-wrapper">
+        <img src="./create_CV/profile.jpg" alt="Heeyun Cho" class="profile-img">
+    </div>
+
+    <main>
+        <section class="hero">
+            <p class="hero-pre">Hi, my name is</p>
+            <h1>HEEYUN CHO.</h1>
+            <h2>I engineer high-performance systems.</h2>
+            <p>
+                Senior Systems Engineer and Architect with 15+ years of experience across <strong>Automotive OTA</strong>, <strong>Embedded Linux (Yocto)</strong>, and <strong>Android Mobile Systems</strong>. I specialize in bridging complex hardware-software interfaces for mission-critical platforms.
+            </p>
+            <div>
+                <a href="#experience" style="border: 1px solid var(--secondary); color: var(--secondary); padding: 20px 30px; text-decoration: none; border-radius: 4px; font-family: 'Space Mono', monospace; transition: var(--transition);">Explore My Work</a>
+            </div>
+        </section>
+
+        <section id="mcp">
+            <div class="section-header">
+                <span>01.</span><h3>Autonomous Extensions (MCP)</h3>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <i class="fa-solid fa-robot"></i>
+                    <h4>mcp_agent</h4>
+                    <p>A self-extending AI orchestration server. Capable of autonomously scaffolding and registering new MCP servers to overcome model limitations in real-time.</p>
+                    <div class="project-tech"><span>TypeScript</span> <span>Node.js</span> <span>Automation</span></div>
+                </div>
+                <div class="project-card">
+                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                    <h4>mcp_search_local_file</h4>
+                    <p>Sub-millisecond file system indexing and retrieval server. Integrates with the Everything Search Engine HTTP API for deep system visibility.</p>
+                    <div class="project-tech"><span>JSON-RPC</span> <span>API Integration</span> <span>Rust/Node</span></div>
+                </div>
+                <div class="project-card">
+                    <i class="fa-solid fa-terminal"></i>
+                    <h4>mcp_prompt</h4>
+                    <p>An intent-analysis middleware that optimizes raw user input into high-signal engineering prompts, improving execution accuracy for LLM-driven CLIs.</p>
+                    <div class="project-tech"><span>NLP</span> <span>Heuristics</span> <span>Optimization</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header">
+                <span>02.</span><h3>Professional Impact</h3>
+            </div>
+            
+            <div class="exp-container">
+                <!-- Da Vinci / Hyundai -->
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Lead Validation Engineer @ </span>
+                        <span class="job-company">Da vinci / Hyundai</span>
+                        <p class="job-date">Aug 2025 — Present</p>
+                    </div>
+                    <div class="impact-tag">Automotive OTA Architecture</div>
+                    <ul class="job-list">
+                        <li><strong>CCU 2.0 (Hyundai):</strong> Leading validation for Next-Gen Central Communication Units, focusing on CCS, OTA, and TeleManager modules.</li>
+                        <li><strong>Efficiency Optimization:</strong> Developed a proprietary Log Analyzer using Python/Shell that automated 80% of routine triage for OTA validation blockers.</li>
+                        <li><strong>Stakeholder Bridge:</strong> Resolving critical SOP blockers by coordinating technical requirements between OEM function owners and global engineering teams.</li>
+                    </ul>
+                </div>
+
+                <!-- LG / VW -->
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Android Auto Product Owner @ </span>
+                        <span class="job-company">LG Electronics / VW</span>
+                        <p class="job-date">Jul 2016 — Jun 2021</p>
+                    </div>
+                    <div class="impact-tag">Infotainment & Embedded Linux</div>
+                    <ul class="job-list">
+                        <li><strong>MIB3 / ICAS3 (Volkswagen):</strong> Directed the development of Google Android Auto for VW's revolutionary In-Car Application Server architecture.</li>
+                        <li><strong>Google Certification:</strong> Successfully led global certification for MIB3, MIB3GP, and ICAS3 variants across Audi, Porsche, and VW brands.</li>
+                        <li><strong>Deep System Debugging:</strong> Utilized GDB and CPU/Memory profiling to resolve kernel-level stability issues in the <strong>Yocto-based Linux</strong> environment.</li>
+                        <li><strong>Wireless Connectivity:</strong> Orchestrated S/W integration with Qualcomm and Cinemo to enable industry-first stable Wireless AppConnect performance.</li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Senior Android Developer @ </span>
+                        <span class="job-company">LG Electronics / T-Mobile</span>
+                        <p class="job-date">Feb 2011 — May 2016</p>
+                    </div>
+                    <div class="impact-tag">Mobile Framework & Java</div>
+                    <ul class="job-list">
+                        <li><strong>Framework Development:</strong> Built and optimized core Android Java applications for the <strong>T-Mobile USA</strong> flagship lineup (G-Series, myTouch).</li>
+                        <li><strong>DLNA Specialist:</strong> Achieved official S/W certification for DLNA media sharing across 20+ LG Android devices, optimizing media streaming protocols for high-latency networks.</li>
+                        <li><strong>Cloud & Messaging:</strong> Developed a Google Brillo-based streaming application and led development for T-Mobile's specialized Network Messaging services.</li>
+                        <li><strong>System Velocity:</strong> Automated daily build systems using Python and Shell, reducing integration cycles from 24 hours to 4 hours.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-header">
+                <span>03.</span><h3>Technical Arsenal</h3>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <h4>Automotive & Embedded</h4>
+                    <div class="skill-items">
+                        <span class="skill-pill">OTA Validation</span>
+                        <span class="skill-pill">Embedded Linux (Yocto)</span>
+                        <span class="skill-pill">ICAS3 Architecture</span>
+                        <span class="skill-pill">CAN / LIN / Ethernet</span>
+                        <span class="skill-pill">Log Analysis</span>
+                        <span class="skill-pill">POSIX Compliance</span>
+                    </div>
+                </div>
+                <div class="skill-cat">
+                    <h4>Software Engineering</h4>
+                    <div class="skill-items">
+                        <span class="skill-pill">Java (Android)</span>
+                        <span class="skill-pill">C++ (Android Auto)</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Bash / Shell</span>
+                        <span class="skill-pill">TypeScript / Node.js</span>
+                        <span class="skill-pill">GDB / Valgrind</span>
+                    </div>
+                </div>
+                <div class="skill-cat">
+                    <h4>Protocols & Methodologies</h4>
+                    <div class="skill-items">
+                        <span class="skill-pill">DLNA / UPnP</span>
+                        <span class="skill-pill">MCP Protocol</span>
+                        <span class="skill-pill">Git / Jira / KPM</span>
+                        <span class="skill-pill">Agile / Scrum</span>
+                        <span class="skill-pill">Google Android Auto SDK</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="demo">
+            <div class="section-header">
+                <span>04.</span><h3>System Impact & Orchestration Demo</h3>
+            </div>
+            <div style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-align: center;">
+                <p style="margin-bottom: 25px; color: var(--text-dim); max-width: 800px; margin-left: auto; margin-right: auto;">
+                    This verified demonstration showcases the <strong>Gemini CLI</strong> in action—orchestrating complex system tasks, managing <strong>MCP Servers</strong>, and autonomously implementing software solutions. It highlights my expertise in <strong>Full-Stack Automation</strong> and <strong>AI System Architecture</strong>.
+                </p>
+                <div style="max-width: 800px; margin: 0 auto; border: 2px solid var(--secondary); border-radius: 8px; overflow: hidden; box-shadow: 0 0 30px rgba(100, 255, 218, 0.1); background: #000;">
+                    <video width="100%" height="auto" controls muted playsinline poster="./portfolio_poster.png">
+                        <source src="./System_Impact_Demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="margin-top: 25px; display: flex; justify-content: center; gap: 20px;">
+                    <a href="./System_Impact_Demo.mp4" target="_blank" style="color: var(--secondary); text-decoration: none; font-family: 'Space Mono', monospace; font-size: 0.9rem; border: 1px solid var(--secondary); padding: 10px 20px; border-radius: 4px; transition: all 0.3s ease;">
+                        <i class="fa-solid fa-external-link"></i> Open Video Directly
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Built with Precision & Pride. Heeyun Cho &copy; 2026</p>
+    </footer>
+</div>
+
+</body>
+</html>
