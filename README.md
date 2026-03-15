@@ -1,9 +1,5 @@
 # Hi there, I'm Heeyun Cho 👋
 
-<p align="center">
-  <img src="./assets/profile.jpg" width="250" style="border-radius: 10px; border: 2px solid #64ffda;">
-</p>
-
 ## 🛠️ Senior Systems Engineer & Architect
 Senior Systems Engineer and Architect with 15+ years of experience across **Automotive OTA**, **Embedded Linux (Yocto)**, and **Android Mobile Systems**. I specialize in bridging complex hardware-software interfaces for mission-critical platforms.
 
