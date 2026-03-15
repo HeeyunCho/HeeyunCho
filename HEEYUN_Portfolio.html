@@ -266,24 +266,90 @@
         </section>
         <section id="demo">
             <div class="section-header">
-                <span>04.</span><h3>System Impact & Orchestration Demo</h3>
+                <span>04.</span><h3>Autonomous Terminal Session</h3>
             </div>
-            <div style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-align: center;">
-                <p style="margin-bottom: 25px; color: var(--text-dim); max-width: 800px; margin-left: auto; margin-right: auto;">
-                    This verified demonstration showcases the <strong>Gemini CLI</strong> in action—orchestrating complex system tasks, managing <strong>MCP Servers</strong>, and autonomously implementing software solutions. It highlights my expertise in <strong>Full-Stack Automation</strong> and <strong>AI System Architecture</strong>.
-                </p>
-                <div style="max-width: 800px; margin: 0 auto; border: 2px solid var(--secondary); border-radius: 8px; overflow: hidden; box-shadow: 0 0 30px rgba(100, 255, 218, 0.1); background: #000;">
-                    <video width="100%" height="auto" controls muted playsinline poster="./portfolio_poster.png">
-                        <source src="./System_Impact_Demo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="terminal-title">heeyun@orchestrator: ~</div>
                 </div>
-                <div style="margin-top: 25px; display: flex; justify-content: center; gap: 20px;">
-                    <a href="./System_Impact_Demo.mp4" target="_blank" style="color: var(--secondary); text-decoration: none; font-family: 'Space Mono', monospace; font-size: 0.9rem; border: 1px solid var(--secondary); padding: 10px 20px; border-radius: 4px; transition: all 0.3s ease;">
-                        <i class="fa-solid fa-external-link"></i> Open Video Directly
-                    </a>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="prompt">❯</span> <span class="typed-text" id="terminal-text"></span><span class="cursor">_</span></div>
+                    <div id="terminal-output" class="terminal-output"></div>
                 </div>
             </div>
+            <style>
+                .terminal-container {
+                    background: #011627;
+                    border-radius: 8px;
+                    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+                    overflow: hidden;
+                    font-family: 'Space Mono', monospace;
+                    margin: 40px auto;
+                    max-width: 900px;
+                    border: 1px solid #1e2d3d;
+                }
+                .terminal-header {
+                    background: #0b1e35;
+                    padding: 12px 20px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #1e2d3d;
+                }
+                .terminal-buttons { display: flex; gap: 8px; margin-right: 20px; }
+                .terminal-buttons span { width: 12px; height: 12px; border-radius: 50%; }
+                .terminal-buttons span:nth-child(1) { background: #ff5f56; }
+                .terminal-buttons span:nth-child(2) { background: #ffbd2e; }
+                .terminal-buttons span:nth-child(3) { background: #27c93f; }
+                .terminal-title { color: #8892b0; font-size: 0.8rem; }
+                .terminal-body { padding: 30px; min-height: 300px; color: #ccd6f6; font-size: 0.95rem; }
+                .prompt { color: #64ffda; margin-right: 10px; }
+                .cursor { animation: blink 1s infinite; color: #64ffda; }
+                @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+                .terminal-output { margin-top: 15px; color: #8892b0; line-height: 1.4; white-space: pre-wrap; }
+                .success { color: #64ffda; }
+                .info { color: #82aaff; }
+            </style>
+            <script>
+                const commands = [
+                    { cmd: "mcp-orchestrate --task 'build and sync portfolio'", output: "[RESEARCH] Scanning workspace directories...\n[STATUS] Found 8 projects. No Git detected in 3.\n[ACTION] Initializing Git for 'record_gemini_cli'...\n[SUCCESS] Master branch created." },
+                    { cmd: "gh repo create HeeyunCho --push", output: "✓ Created repository HeeyunCho/HeeyunCho on github.com\n✓ Pushed Professional README to master.\n[LIVE] https://github.com/HeeyunCho" },
+                    { cmd: "npm run optimize-assets", output: "[FLIGHT-CHECK] Verifying video codecs...\n[FIX] Remuxing MKV to MP4 (H.264 High Profile)\n[DONE] Mobile playback compatibility: 100%" }
+                ];
+
+                let cmdIdx = 0;
+                let charIdx = 0;
+                const textEl = document.getElementById('terminal-text');
+                const outputEl = document.getElementById('terminal-output');
+
+                function typeCommand() {
+                    if (cmdIdx >= commands.length) { cmdIdx = 0; }
+                    const current = commands[cmdIdx];
+                    
+                    if (charIdx < current.cmd.length) {
+                        textEl.textContent += current.cmd.charAt(charIdx);
+                        charIdx++;
+                        setTimeout(typeCommand, 50);
+                    } else {
+                        setTimeout(() => {
+                            outputEl.innerHTML += `\n<span class="info">${current.output}</span>\n\n`;
+                            setTimeout(clearTerminal, 3000);
+                        }, 500);
+                    }
+                }
+
+                function clearTerminal() {
+                    textEl.textContent = "";
+                    outputEl.innerHTML = "";
+                    charIdx = 0;
+                    cmdIdx++;
+                    typeCommand();
+                }
+
+                document.addEventListener('DOMContentLoaded', typeCommand);
+            </script>
         </section>
 
     </main>

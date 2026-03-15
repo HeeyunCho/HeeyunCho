@@ -32,13 +32,33 @@ Senior Systems Engineer and Architect with 15+ years of experience across **Auto
 
 ---
 
-### 📺 System Impact & Orchestration Demo
-*A verified demonstration of the Gemini CLI orchestrating complex tasks.*
+### 🧠 Orchestration Logic: How I Automate
+*A visual representation of the Gemini CLI executing complex system tasks autonomously.*
+
+```mermaid
+graph TD
+    A[User Request] --> B{Intent Analysis}
+    B -- Feature --> C[Research & Architecture]
+    B -- Bug Fix --> D[Root Cause Diagnosis]
+    C --> E[Iterative Plan-Act-Validate]
+    D --> E
+    E --> F[Automated Unit Testing]
+    F -- Success --> G[Production Deployment/Push]
+    F -- Failure --> E
+    G --> H[Verified Live Solution]
+    
+    style A fill:#0a192f,stroke:#64ffda,color:#fff
+    style G fill:#112240,stroke:#64ffda,color:#64ffda
+    style H fill:#64ffda,stroke:#0a192f,color:#0a192f
+```
+
+---
+
+### 📺 System Impact Demo
+*Watch the Gemini CLI orchestrate a full-stack deployment in real-time.*
 
 <p align="center">
-  <img src="./portfolio_poster.png" width="600">
-  <br>
-  <a href="./System_Impact_Demo.mp4"><b>▶️ Watch the System Impact Demo</b></a>
+  <a href="./System_Impact_Demo.mp4"><b>▶️ Click to Play: Autonomous Orchestration Demo</b></a>
 </p>
 
 ---
