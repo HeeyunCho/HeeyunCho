@@ -22,6 +22,11 @@ Senior Systems Engineer and Architect with 15+ years of experience across **Auto
 *   **CCU 2.0 (Hyundai):** Leading validation for Next-Gen Central Communication Units.
 *   **Efficiency:** Automated 80% of routine triage using proprietary Python/Shell Log Analyzers.
 
+#### **Systems Architect & Project Lead @ Hyundai Mobis** (Jun 2021 — Jan 2023)
+*   **ccNC (Connected Car Navigation Cockpit):** Designed critical vehicle control interfaces over CAN networks for Hyundai's flagship infotainment platform.
+*   **Lifecycle Management:** Managed the full development lifecycle, including resource estimation, timeline organization, and cross-functional requirements engineering.
+*   **Quality & Stability:** Directed code reviews and technical clarification, resulting in significantly improved stability for integrated Voice Recognition (VR) software.
+
 #### **Android Auto Product Owner @ LG Electronics / VW** (Jul 2016 — Jun 2021)
 *   **MIB3 / ICAS3 (Volkswagen):** Directed Google Android Auto development for VW's In-Car Application Server.
 *   **Certification:** Led global certification across Audi, Porsche, and VW brands.
