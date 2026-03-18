@@ -1,0 +1,21 @@
+{
+  "gem_name": "agentic_architect_pro",
+  "version": "1.0.0",
+  "author": "Cloud Systems Team",
+  "description": "Architectural specialist for Agentic Design Patterns",
+  "base_model": "gemini-1.5-pro",
+  "system_instructions": "Refer to instructions above",
+  "capabilities": {
+    "research": true,
+    "pattern_matching": true,
+    "cost_analysis": true,
+    "diagram_generation": true
+  },
+  "metadata": {
+    "reference_url": "https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system",
+    "supported_patterns": [
+      "ReAct", "Sequential", "Parallel", "Swarm", "Hierarchical", "Human-in-the-loop"
+    ],
+    "optimization_targets": ["Latency", "Cost", "Reliability", "Autonomy"]
+  }
+}
