@@ -1,6 +1,6 @@
 # MCP Portfolio: Professional Agentic Ecosystem (2026 Standards)
 
-This project showcases a standardized suite of **25 repositories**, featuring specialized MCP servers and core engineering projects, all optimized for **AI-Semantic Naming** and a professional **7-step engineering workflow**.
+This project showcases a standardized suite of **23 repositories**, featuring specialized MCP servers and core engineering projects, all optimized for **AI-Semantic Naming** and a professional **7-step engineering workflow**.
 
 ## 🚀 Advanced Agentic Orchestration
 These agents implement cutting-edge design patterns for autonomous systems:
@@ -25,22 +25,20 @@ Servers dedicated to code quality, debugging, and standardization:
 
 ## 📊 DLT (Diagnostic Log and Trace) Suite
 High-performance system monitoring and binary log parsing:
-14. **[dlt-viewer-v2](https://github.com/HeeyunCho/dlt-viewer-v2)**: Modern, decoupled DLT viewer prototype (Tauri/React).
-15. **[dlt-core-rust](https://github.com/HeeyunCho/dlt-core-rust)**: Zero-copy, high-performance DLT parser engine in Rust.
-16. **[dlt-core-ts](https://github.com/HeeyunCho/dlt-core-ts)**: Prototype parser demonstrating memory-safe buffer operations in TS.
+14. **[dlt-core-rust](https://github.com/HeeyunCho/dlt-core-rust)**: Zero-copy, high-performance DLT parser engine in Rust.
+15. **[dlt-core-ts](https://github.com/HeeyunCho/dlt-core-ts)**: Prototype parser demonstrating memory-safe buffer operations in TS.
 
 ## 📋 Professional Branding & Portfolio
-17. **[create_CV](https://github.com/HeeyunCho/create_CV)**: Automated high-quality CV generation engine.
-18. **[github-portfolio-manager](https://github.com/HeeyunCho/github-portfolio-manager)**: Automated sync and showcase tool.
-19. **[linkedin-manager](https://github.com/HeeyunCho/linkedin-manager)**: ATS-optimized professional profile generation.
-20. **[grammar-expert](https://github.com/HeeyunCho/grammar-expert)**: High-impact tone and technical clarity refinement.
+15. **[github-portfolio-manager](https://github.com/HeeyunCho/github-portfolio-manager)**: Automated sync and showcase tool.
+16. **[linkedin-manager](https://github.com/HeeyunCho/linkedin-manager)**: ATS-optimized professional profile generation.
+17. **[grammar-expert](https://github.com/HeeyunCho/grammar-expert)**: High-impact tone and technical clarity refinement.
 
 ## 🔍 Productivity Tools
-21. **[mcp_agent](https://github.com/HeeyunCho/mcp_agent)**: Meta-server for autonomous ecosystem expansion.
-22. **[mcp_prompt](https://github.com/HeeyunCho/mcp_prompt)**: Prompt engineering and request optimization.
-23. **[mcp_search_local_file](https://github.com/HeeyunCho/mcp_search_local_file)**: Ultra-fast indexing via Everything Engine.
-24. **[programming-helper](https://github.com/HeeyunCho/programming-helper)**: Language guidance and design pattern authority.
-25. **[record_gemini_cli](https://github.com/HeeyunCho/record_gemini_cli)**: Screen recording for behavior logging and demos.
+18. **[mcp_agent](https://github.com/HeeyunCho/mcp_agent)**: Meta-server for autonomous ecosystem expansion.
+19. **[mcp_prompt](https://github.com/HeeyunCho/mcp_prompt)**: Prompt engineering and request optimization.
+20. **[mcp_search_local_file](https://github.com/HeeyunCho/mcp_search_local_file)**: Ultra-fast indexing via Everything Engine.
+21. **[programming-helper](https://github.com/HeeyunCho/programming-helper)**: Language guidance and design pattern authority.
+22. **[record_gemini_cli](https://github.com/HeeyunCho/record_gemini_cli)**: Screen recording for behavior logging and demos.
 
 ---
 **Standardized by Gemini CLI** | *March 2026*
