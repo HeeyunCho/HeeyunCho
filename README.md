@@ -1,77 +1,33 @@
-# Hi there, I'm Heeyun Cho 👋
+# MCP Portfolio: Professional Agentic Ecosystem (2026 Standards)
 
-## 🛠️ Senior Systems Engineer & Architect
-Senior Systems Engineer and Architect with 15+ years of experience across **Automotive OTA**, **Embedded Linux (Yocto)**, and **Android Mobile Systems**. I specialize in bridging complex hardware-software interfaces for mission-critical platforms.
+This project showcases a standardized suite of 19 MCP (Model Context Protocol) servers, all optimized for **AI-Semantic Naming** and a professional **7-step engineering workflow**.
 
----
+## 🚀 Featured Agents (New in this Session)
+These agents implement cutting-edge agentic design patterns:
+1.  **[react-programmer-agent](https://github.com/HeeyunCho/react-programmer-agent)**: Implements the Reason and Act (ReAct) pattern for traceable coding.
+2.  **[iterative-refinement-agent](https://github.com/HeeyunCho/iterative-refinement-agent)**: Facilitates the "Draft -> Critique -> Rewrite" loop.
+3.  **[modern-patterns-agent](https://github.com/HeeyunCho/modern-patterns-agent)**: Toolkit for AI Orchestration, Cellular Resilience, and GreenOps.
+4.  **[coding-standards-agent](https://github.com/HeeyunCho/coding-standards-agent)**: Enforces 2026 AI-Semantic Naming and Contextual Intent.
 
-### 🚀 Autonomous Extensions (MCP)
-*These tools are part of my active AI infrastructure research.*
+## 🛠 Core Infrastructure & Security
+- **[ADK-Transformation](https://github.com/HeeyunCho/ADK-Transformation)**: Master Gateway for ADK Sidecar architecture.
+- **[check-security](https://github.com/HeeyunCho/check-security)**: Automated secret scanning and git hygiene.
+- **[command-guardrail](https://github.com/HeeyunCho/command-guardrail)**: Defensive layer for safe shell execution.
+- **[smart-powershell](https://github.com/HeeyunCho/smart-powershell)**: Robust PowerShell execution with deep error capture.
+- **[update_mcp_configuration](https://github.com/HeeyunCho/update_mcp_configuration)**: Automated server registration.
 
-*   **mcp_agent**: A self-extending AI orchestration server.
-*   **mcp_search_local_file**: Sub-millisecond file system indexing and retrieval.
-*   **mcp_prompt**: Intent-analysis middleware for engineering prompt optimization.
-*   **record_gemini_cli**: Robust screen recording server optimized for mobile/web.
-*   **programming-helper**: Expert guidance for language grammar and design patterns.
+## 📋 Productivity & Management
+- **[workflow-orchestrator](https://github.com/HeeyunCho/workflow-orchestrator)**: Enforcer of the professional engineering lifecycle.
+- **[github-portfolio-manager](https://github.com/HeeyunCho/github-portfolio-manager)**: Automated sync and showcase tool.
+- **[linkedin-manager](https://github.com/HeeyunCho/linkedin-manager)**: ATS-optimized professional profile generation.
+- **[grammar-expert](https://github.com/HeeyunCho/grammar-expert)**: High-impact tone and technical clarity refinement.
 
----
-
-### 💼 Professional Impact
-
-#### **Lead Validation Engineer @ Da vinci / Hyundai** (Aug 2025 — Present)
-*   **CCU 2.0 (Hyundai):** Leading validation for Next-Gen Central Communication Units.
-*   **Efficiency:** Automated 80% of routine triage using proprietary Python/Shell Log Analyzers.
-
-#### **Systems Architect & Project Lead @ Hyundai Mobis** (Jun 2021 — Jan 2023)
-*   **ccNC (Connected Car Navigation Cockpit):** Designed critical vehicle control interfaces over CAN networks for Hyundai's flagship infotainment platform.
-*   **Lifecycle Management:** Managed the full development lifecycle, including resource estimation, timeline organization, and cross-functional requirements engineering.
-*   **Quality & Stability:** Directed code reviews and technical clarification, resulting in significantly improved stability for integrated Voice Recognition (VR) software.
-
-#### **Android Auto Product Owner @ LG Electronics / VW** (Jul 2016 — Jun 2021)
-*   **MIB3 / ICAS3 (Volkswagen):** Directed Google Android Auto development for VW's In-Car Application Server.
-*   **Certification:** Led global certification across Audi, Porsche, and VW brands.
-
-#### **Senior Android Developer @ LG Electronics / T-Mobile** (Feb 2011 — May 2016)
-*   **Framework:** Built core Android applications for T-Mobile USA flagship lineup.
-*   **DLNA Specialist:** Achieved S/W certification for media sharing across 20+ devices.
+## 🔍 Specialized Tools
+- **[mcp_agent](https://github.com/HeeyunCho/mcp_agent)**: Meta-server for autonomous ecosystem expansion.
+- **[mcp_prompt](https://github.com/HeeyunCho/mcp_prompt)**: Prompt engineering and request optimization.
+- **[mcp_search_local_file](https://github.com/HeeyunCho/mcp_search_local_file)**: Ultra-fast indexing via Everything Engine.
+- **[programming-helper](https://github.com/HeeyunCho/programming-helper)**: Language guidance and design pattern authority.
+- **[record_gemini_cli](https://github.com/HeeyunCho/record_gemini_cli)**: Screen recording for behavior logging and demos.
 
 ---
-
-### 🧠 Orchestration Logic: How I Automate
-*A visual representation of the Gemini CLI executing complex system tasks autonomously.*
-
-```mermaid
-graph TD
-    A[User Request] --> B{Intent Analysis}
-    B -- Feature --> C[Research & Architecture]
-    B -- Bug Fix --> D[Root Cause Diagnosis]
-    C --> E[Iterative Plan-Act-Validate]
-    D --> E
-    E --> F[Automated Unit Testing]
-    F -- Success --> G[Production Deployment/Push]
-    F -- Failure --> E
-    G --> H[Verified Live Solution]
-    
-    style A fill:#0a192f,stroke:#64ffda,color:#fff
-    style G fill:#112240,stroke:#64ffda,color:#64ffda
-    style H fill:#64ffda,stroke:#0a192f,color:#0a192f
-```
-
----
-
-### 📺 System Impact Demo
-*Watch the Gemini CLI orchestrate a full-stack deployment in real-time.*
-
-<p align="center">
-  <a href="./System_Impact_Demo.mp4"><b>▶️ Click to Play: Autonomous Orchestration Demo</b></a>
-</p>
-
----
-
-### 🛠️ Technical Arsenal
-*   **Automotive:** OTA Validation, ICAS3, CAN/LIN/Ethernet, Yocto Linux.
-*   **Software:** TypeScript, Node.js, Python, Java (Android), C++ (Embedded).
-*   **Protocols:** MCP, DLNA/UPnP, JSON-RPC.
-
----
-*This profile is automatically managed by my custom Portfolio Manager MCP.*
+**Standardized by Gemini CLI** | *March 2026*
