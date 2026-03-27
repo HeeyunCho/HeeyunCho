@@ -1,0 +1,21 @@
+{
+  "name": "mcp_codebeamer_parser",
+  "version": "1.0.0",
+  "description": "Codebeamer Test Case Ingestion Parser for CCU 2.0 ATRE. Parses Excel exports into structured JSON.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "fs-extra": "^11.3.4",
+    "xlsx": "^0.18.5",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  }
+}

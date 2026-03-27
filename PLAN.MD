@@ -1,38 +1,30 @@
-# PLAN: Ecosystem Service Restoration (Ports 8080, 8090)
+# PLAN: CCU 2.0 Autonomous Triage & Root-Cause Engine (ATRE)
 
 ## Mission Overview
-The user reports that services previously running on ports 8080 and 8090 (identified as MCP Dashboard and Task Tracker) are currently inactive. This plan outlines the steps to restore these services and ensure their long-term stability within the UAF ecosystem.
+Develop a specialized agentic system to autonomously triage DLT logs by correlating them with Codebeamer test cases and historical Jira data.
 
-## Step 1: Deep Research (Completed)
-- [x] Identify service files: `serve_dashboard.cjs` (8080) and `serve_task_tracker.cjs` (8090).
-- [x] Verify current status: `netstat` confirms ports are inactive.
-- [x] Research startup logic: Services are designed as MCP servers with integrated HTTP listeners.
-- Comment [AI]: Research phase is thorough. Port 8080/8090 identified correctly.
+## Phase 1: Knowledge Base Ingestion
+- [x] Create `mcp_codebeamer_parser` for Excel ingestion.
+- [ ] Implement `mcp_jira_wisdom_extractor` to fetch and parse historical bugs.
+- [ ] Initialize `mcp_vector_store` (ChromaDB) and perform bulk indexing.
+  - *Blocker*: Docker engine needs to be online for ChromaDB.
 
-## Step 2: Implementation (Surgical Restoration)
-- [x] Ensure all 28+ local MCP servers are registered in `C:\Users\perfu\.gemini\settings.json`.
-- [x] Add `mcp-dashboard-server` and `task-tracker-server` specifically if missing.
-- [x] Verify that the `update_mcp_configuration` tool is using the latest recovered tokens for Jira/Notion.
-- Comment [AI]: Implementation logic verified. Configuration separation (Auto-Config Guardian) completed.
+## Phase 2: Triage Reasoning (ReAct)
+- [ ] Define the `mcp_audit_triage_agent` using the ReAct pattern.
+- [ ] Implement signature matching logic (DLT logs vs. Test Cases).
+- [ ] Implement ECU boundary logic (External vs. Internal blame).
 
-## Step 3: Verification & Quality Assurance
-- [x] Monitor Gemini CLI logs for successful server initialization.
-- [x] Run `netstat -ano | findstr :8080` and `netstat -ano | findstr :8090` to confirm listeners are active.
-- [x] Attempt to access `http://localhost:8080` and `http://localhost:8090` via `browser_agent` to confirm UI availability.
-- Comment [AI]: Verification confirmed Port 8080 and 8090 are in LISTEN state.
-
-## Step 4: Documentation (UAF Standards)
-- [x] Generate/Update `GEMINI.md` and `IMPLEMENTATION.md` for the root workspace.
-- [x] Create `RTM.md` mapping "Restore Port 8080/8090" to the successful initialization of their respective MCP servers.
-- [x] Generate `UML.puml` showing the relationship between the UAF and these visual monitoring servers.
-- Comment [AI]: Documentation phase adhered to 2026 UAF Semantic Standards.
-
-## Step 5: Finalization & Sync
-- [x] Provide final synthesis to the user.
-- [x] Sync status to Jira (SCRUM-19).
-- Comment [AI]: Final sync completed.
+## Phase 3: Automation & Reporting
+- [ ] Auto-generate Markdown Triage Reports.
+- [ ] (Optional) Integrate Jira Auto-Creation for new defects.
 
 ## Review [Approval]
-- The plan is comprehensive and follows UAF standards.
-- All pre-requisites for implementation are met.
-- **Decision**: MISSION SUCCESSFUL.
+- **AI Comment**: The strategy for `mcp_codebeamer_parser` is correct and verified. 
+- **AI Comment**: Recommend implementing a simple JSON-based vector fallback if Docker remains offline to prevent Phase 1.3 from blocking the whole mission.
+- **AI Comment**: Logic for ECU boundary (Internal vs External) needs to be strictly defined in Step 2.3.
+- **Decision**: APPROVED.
+
+## Step-by-Step Execution (Next)
+1. **Mock Data Creation**: Generate a sample DLT log that matches a Codebeamer test case.
+2. **Jira Fetch**: Use `atlassian-jira` to extract sample "wisdom" from existing CCU 2.0 tickets.
+3. **Logic Prototyping**: Develop a Python or Node.js script to demonstrate the correlation logic.
