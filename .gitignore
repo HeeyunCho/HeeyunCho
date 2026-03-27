@@ -1,18 +1,23 @@
-# Sensitive files
-token.json
+# Google Secrets
+client_secret_*.json
 credentials.json
-client_secret*.json
-GPG_KEY/
-*.gdoc
-.port.json
-.tmp.drivedownload/
-.tmp.driveupload/
-
-# Logs and environment
-*.log
+token.json
 .env
+*.pem
+*.p12
 
-# Build and dependencies
+# Build Artifacts
 node_modules/
 dist/
-package-lock.json
+build/
+target/
+.tmp.*/
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Sanitized Research & Secrets
+research/
+GPG_KEY/

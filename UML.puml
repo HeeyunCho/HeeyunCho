@@ -1,0 +1,29 @@
+@startuml
+package "Unified Agentic Framework (UAF)" {
+    [UAF Meta-Orchestrator] as Meta
+    [ADK Master Gateway] as Gateway
+}
+
+package "Visual Monitoring Nodes" {
+    [MCP Dashboard (Port 8080)] as Dashboard
+    [Task Tracker (Port 8090)] as TaskTracker
+}
+
+package "Sidecar Agents" {
+    [check-security] as Security
+    [workflow-orchestrator] as Lifecycle
+    [programming-expert] as Engineering
+    [github-portfolio-manager] as Branding
+}
+
+Meta --> Gateway : Initializes Mission
+Gateway --> Dashboard : Synchronizes Status
+Gateway --> TaskTracker : Pushes Updates
+
+Gateway ..> Security : Delegates (A2A)
+Gateway ..> Lifecycle : Delegates (A2A)
+Gateway ..> Engineering : Delegates (A2A)
+Gateway ..> Branding : Delegates (A2A)
+
+Dashboard --[hidden] TaskTracker
+@enduml
