@@ -4,6 +4,10 @@
       "command": "C:/gemini_project/mcp_fs_go/mcp_fs_go.exe",
       "args": []
     },
+    "mcp-memory-bank": {
+      "command": "C:/gemini_project/mcp_memory_bank/mcp_memory_bank.exe",
+      "args": []
+    },
     "unified-agentic-framework": {
       "command": "node",
       "args": [

@@ -1,0 +1,27 @@
+{
+  "name": "gemini_project",
+  "version": "1.0.0",
+  "description": "This project showcases a standardized suite of **23 repositories**, featuring specialized MCP servers and core engineering projects, all optimized for **AI-Semantic Naming** and a professional **7-step engineering workflow**.",
+  "main": "TEST_SUITE.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeeyunCho/HeeyunCho.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/HeeyunCho/HeeyunCho/issues"
+  },
+  "homepage": "https://github.com/HeeyunCho/HeeyunCho#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "@modelcontextprotocol/server-filesystem": "^2026.1.14",
+    "sqlite3": "^6.0.1",
+    "xlsx": "^0.18.5"
+  }
+}
