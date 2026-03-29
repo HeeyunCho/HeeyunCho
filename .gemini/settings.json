@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "fs": {
+      "command": "C:/gemini_project/mcp_fs_go/mcp_fs_go.exe",
+      "args": []
+    },
+    "unified-agentic-framework": {
+      "command": "node",
+      "args": [
+        "C:/gemini_project/unified-agentic-framework/dist/index.js"
+      ],
+      "cwd": "C:/gemini_project/unified-agentic-framework",
+      "env": {
+        "UAF_PERSISTENCE": "ENABLED",
+        "NOTION_TOKEN": "PLACEHOLDER_NOTION_TOKEN",
+        "JIRA_API_TOKEN": "PLACEHOLDER_JIRA_TOKEN",   
+        "JIRA_URL": "PLACEHOLDER_JIRA_URL",
+        "JIRA_EMAIL": "PLACEHOLDER_JIRA_EMAIL"
+      }
+    },
+    "mcp-dashboard-server": {
+      "command": "node",
+      "args": [
+        "C:\\gemini_project\\serve_unified_command_center.cjs"
+      ]
+    }
+  }
+}
