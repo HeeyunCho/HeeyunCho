@@ -3,7 +3,7 @@
 This ecosystem represents a master-orchestrated suite of **23+ repositories**, transitioned to a high-performance **Hybrid Architecture** (2026 Standards). It combines the rapid reasoning of TypeScript with the raw systems power of Go.
 
 ## 🧠 The Brain: Unified Agent Hub (UAH)
-The [unified-agentic-framework](https://github.com/HeeyunCho/unified-agentic-framework) is the central command center. It uses a multiplexed plugin architecture to consolidate 20+ isolated agents into a single efficient process.
+The [unified-agentic-framework](./unified-agentic-framework) is the central command center. It uses a multiplexed plugin architecture to consolidate 20+ isolated agents into a single efficient process.
 
 ### **Integrated UAH Plugins:**
 - **🛡️ Security & Integrity:** Deep secret scanning, repo hygiene, and mandatory gating.
@@ -15,8 +15,8 @@ The [unified-agentic-framework](https://github.com/HeeyunCho/unified-agentic-fra
 
 ## 🏎️ The Muscles: Native Systems Layer (Go)
 To achieve sub-millisecond I/O and zero-latency startup, core system operations have been ported to native **Go binaries**:
-1.  **[mcp_fs_go](https://github.com/HeeyunCho/mcp_fs_go)**: High-performance file system engine (15x faster than Node.js).
-2.  **[mcp_memory_bank](https://github.com/HeeyunCho/mcp_memory_bank)**: Native memory engine using SQLite + FTS5.
+1.  **[mcp_fs_go](./mcp_fs_go)**: High-performance file system engine (15x faster than Node.js).
+2.  **[mcp_memory_bank](./mcp_memory_bank)**: Native memory engine using SQLite + FTS5.
 
 ## 💾 AI Memory Bank: Long-Term Context
 The ecosystem is now "Cognitive." It features a persistent local memory bank that allows agents to remember user preferences, architectural decisions, and project context across all sessions.
