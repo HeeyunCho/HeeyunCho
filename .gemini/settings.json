@@ -1,32 +1,89 @@
 {
-  "mcpServers": {
-    "fs": {
-      "command": "C:/gemini_project/mcp_fs_go/mcp_fs_go.exe",
-      "args": []
-    },
-    "mcp-memory-bank": {
-      "command": "C:/gemini_project/mcp_memory_bank/mcp_memory_bank.exe",
-      "args": []
-    },
-    "unified-agentic-framework": {
-      "command": "node",
-      "args": [
-        "C:/gemini_project/unified-agentic-framework/dist/index.js"
-      ],
-      "cwd": "C:/gemini_project/unified-agentic-framework",
-      "env": {
-        "UAF_PERSISTENCE": "ENABLED",
-        "NOTION_TOKEN": "PLACEHOLDER_NOTION_TOKEN",
-        "JIRA_API_TOKEN": "PLACEHOLDER_JIRA_TOKEN",   
-        "JIRA_URL": "PLACEHOLDER_JIRA_URL",
-        "JIRA_EMAIL": "PLACEHOLDER_JIRA_EMAIL"
-      }
-    },
-    "mcp-dashboard-server": {
-      "command": "node",
-      "args": [
-        "C:\\gemini_project\\serve_unified_command_center.cjs"
-      ]
+    "mcpServers":  {
+                       "fs":  {
+                                  "command":  "C:/gemini_project/mcp_fs_go/mcp_fs_go.exe",
+                                  "args":  [
+
+                                           ]
+                              },
+                       "mcp-memory-bank":  {
+                                               "command":  "C:/gemini_project/mcp_memory_bank/mcp_memory_bank.exe",
+                                               "args":  [
+
+                                                        ]
+                                           },
+                       "unified-agentic-framework":  {
+                                                         "command":  "node",
+                                                         "args":  [
+                                                                      "C:/gemini_project/unified-agentic-framework/dist/index.js"
+                                                                  ],
+                                                         "cwd":  "C:/gemini_project/unified-agentic-framework",
+                                                         "env":  {
+                                                                     "UAF_PERSISTENCE":  "ENABLED",
+                                                                     "NOTION_TOKEN":  "32bd872b-594c-8106-aa90-0002ace325a1:wvnLo04okFDsEsiS:8WQhuURcku9BIcmMMtr8YphUdpi7QRqv",
+                                                                     "JIRA_API_TOKEN":  "712020-24bf7f1f-7e8e-4c36-8bd0-2aec491d0e9c:RM-BcO9wpU-q-dHB:a7C62paEGyzD7ju9y1UKRLvus9FyVGzT",
+                                                                     "JIRA_URL":  "https://heeyuncho.atlassian.net",
+                                                                     "JIRA_EMAIL":  "heeyun.cho.de@gmail.com"
+                                                                 }
+                                                     },
+                       "mcp-dashboard-server":  {
+                                                    "command":  "node",
+                                                    "args":  [
+                                                                 "C:\\gemini_project\\serve_unified_command_center.cjs"
+                                                             ]
+                                                }
+                   },
+    "hooks": {
+        "BeforeTool": [
+            {
+                "matcher": "run_shell_command",
+                "hooks": [
+                    {
+                        "name": "security-gate",
+                        "type": "command",
+                        "command": "node C:/gemini_project/.gemini/hooks/security_gate.js"
+                    },
+                    {
+                        "name": "port-check",
+                        "type": "command",
+                        "command": "node C:/gemini_project/.gemini/hooks/port_check.js"
+                    }
+                ]
+            }
+        ],
+        "BeforeModel": [
+            {
+                "hooks": [
+                    {
+                        "name": "memory-inject",
+                        "type": "command",
+                        "command": "node C:/gemini_project/.gemini/hooks/memory_inject.js"
+                    }
+                ]
+            }
+        ],
+        "AfterTool": [
+            {
+                "matcher": "write_file|replace",
+                "hooks": [
+                    {
+                        "name": "sync-status",
+                        "type": "command",
+                        "command": "node C:/gemini_project/.gemini/hooks/sync_status.js"
+                    }
+                ]
+            }
+        ],
+        "SessionStart": [
+            {
+                "hooks": [
+                    {
+                        "name": "heartbeat",
+                        "type": "command",
+                        "command": "node C:/gemini_project/.gemini/hooks/heartbeat.js"
+                    }
+                ]
+            }
+        ]
     }
-  }
 }
