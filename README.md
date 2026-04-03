@@ -1,33 +1,57 @@
-# UAF v4.1: Unified Agentic Framework (Hybrid Architecture)
+# 🚀 Unified Agentic Framework (UAF) v8.5 // Celestial
 
-This ecosystem represents a master-orchestrated suite of **23+ repositories**, transitioned to a high-performance **Hybrid Architecture** (2026 Standards). It combines the rapid reasoning of TypeScript with the raw systems power of Go.
+The **Central Intelligence Hub** for the Gemini CLI ecosystem. Evolved into a **Hardened Agentic Operating System** that enforces deterministic engineering through Harness guardrails and high-fidelity visual orchestration.
 
-## 🧠 The Brain: Unified Agent Hub (UAH)
-The [unified-agentic-framework](./unified-agentic-framework) is the central command center. It uses a multiplexed plugin architecture to consolidate 20+ isolated agents into a single efficient process.
+## 📡 Ecosystem Overview
+This repository serves as the master command center for an autonomous suite of **23+ specialized engineering agents**.
 
-### **Integrated UAH Plugins:**
-- **🛡️ Security & Integrity:** Deep secret scanning, repo hygiene, and mandatory gating.
-- **⚡ Performance Sidecar:** Real-time latency tracking and green-ops metrics.
-- **🔬 Code Analyzer:** AST-based structural analysis and Mermaid generation.
-- **🤖 Reasoning Patterns:** Advanced orchestration (Swarm, Sequential, ReAct).
-- **💼 Professional Spec:** Automated LinkedIn, GitHub, and CV optimization.
-- **⚙️ Engineering Auto:** Jira synchronization and 7-step workflow enforcement.
+## 🏗️ Celestial Architecture
+```mermaid
+graph TD
+    subgraph UAF [UAF Hub: TS Orchestration + HARNESS]
+        HE[Harness Engine] --> VG[Validation Gate]
+        VG --> |Verified| PW[Staging -> Write]
+        A2A[A2A Pipe] --> |Auto-Diagnosis| RP[Reasoning Patterns]
+    end
 
-## 🏎️ The Muscles: Native Systems Layer (Go)
-To achieve sub-millisecond I/O and zero-latency startup, core system operations have been ported to native **Go binaries**:
-1.  **[mcp_fs_go](./mcp_fs_go)**: High-performance file system engine (15x faster than Node.js).
-2.  **[mcp_memory_bank](./mcp_memory_bank)**: Native memory engine using SQLite + FTS5.
+    subgraph Security [Security Gate v8.5.1]
+        DS[Deep Secret Scan]
+        HA[Hygiene Audit]
+        SG[Security Hook]
+        DS & HA --> SG
+    end
 
-## 💾 AI Memory Bank: Long-Term Context
-The ecosystem is now "Cognitive." It features a persistent local memory bank that allows agents to remember user preferences, architectural decisions, and project context across all sessions.
-- **Technology:** Go + SQLite + FTS5 (Full-Text Search).
-- **Capability:** Automatic context recall during mission initialization (Zero-Prompt Continuity).
+    subgraph Native [Native Layer: Go / SQLite WAL]
+        FS[mcp_fs_go]
+        MB[mcp_memory_bank]
+    end
 
-## 📊 Dashboard v4.1: Command Center
-Monitor the entire unified mesh at `http://localhost:8080`.
-- **Plugin Pulse:** Live status of all Hub-resident agents.
-- **Memory Stream:** Real-time log of stored and recalled cognitive data.
-- **System Metrics:** High-fidelity DB I/O and RAM usage monitoring.
+    subgraph Observability [Celestial Command Center]
+        DB[Dashboard v8.5]
+        MS[Real-Time SSE Stream]
+    end
+
+    UAF --> Security
+    Security --> Native
+    UAF --> Observability
+```
+
+## 🌟 Key Features (v8.5)
+- **Harness Engineering**: Mandatory Mitchell Hashimoto loops (`Staging -> Validation -> Commitment`) for 100% deterministic writes.
+- **Celestial Engine**: High-fidelity Dashboard v8.5 with Glassmorphism, Aurora gradients, and real-time SSE streaming.
+- **Security Gate (v8.5.1)**: Integrated pre-commit validation hook with entropy-based secret detection.
+- **Cognitive Hub**: Ultra-fast SQLite WAL persistence with multi-process concurrency safety.
+- **Go-Native Performance**: Core I/O (FS, Memory) optimized for <5ms response times.
+
+## 🛡️ Security Policy
+Please refer to [SECURITY.md](SECURITY.md) for vulnerability reporting and security standards.
+
+## 📜 Roadmap
+- [x] **v4.1.0**: AI Memory Bank & Cognitive Loop integration.
+- [x] **v7.0.0**: Streaming Engine & Direct Shell Bridge (Sub-50ms latency).
+- [x] **v8.5.0**: Harness Engineering (Deterministic Cage) & Celestial UI.
+- [x] **v8.5.1**: Security Gate Hook & Native README documentation.
+- [ ] **v9.0.0**: Predictive Self-Healing & Autonomous Unit Test Loops.
 
 ---
-**Standardized & Optimized by Gemini CLI** | *March 2026*
+**Standardized by Gemini CLI** | *v8.5.1 Deployment Active*
