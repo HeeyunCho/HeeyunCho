@@ -12,7 +12,14 @@ dist/
 build/
 target/
 .tmp.*/
+.playwright-mcp/
+.gemini/tmp/
+.gemini/settings.json
 *.log
+*.mp4
+*.png
+dashboard.txt
+code.html
 
 # OS Files
 .DS_Store
@@ -21,3 +28,4 @@ Thumbs.db
 # Sanitized Research & Secrets
 research/
 GPG_KEY/
+client_secret*.json
